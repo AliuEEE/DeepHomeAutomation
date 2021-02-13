@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/connection"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_stroke"
+            android:text="CONNECT"
+            app:fontFamily="@font/titillium_web" />
+
+        <Button
+            android:id="@+id/voiceControl"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_stroke"
+            android:text="VOICE CONTROL"
+            app:fontFamily="@font/titillium_web" />
+
+
+        <Button
+            android:id="@+id/exit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/exit_color"
+            android:text="@string/exit"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold|italic"
+            android:typeface="sans"
+            app:fontFamily="@font/titillium_web" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="HOME AUTOMATION"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+            android:textColor="@android:color/background_light"
+            app:fontFamily="@font/titillium_web" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/yellow_color"
+            android:gravity="center"
+            android:text="LIGHT1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold" />
+
+        <Button
+            android:id="@+id/lightON"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="ON"
+            app:fontFamily="@font/titillium_web" />
+
+        <Button
+            android:id="@+id/lightOFF"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="OFF"
+            app:fontFamily="@font/titillium_web" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/light_green_color"
+            android:gravity="center"
+            android:text="FAN"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold" />
+
+        <Button
+            android:id="@+id/fanON"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="ON"
+            app:fontFamily="@font/titillium_web" />
+
+        <Button
+            android:id="@+id/fanOFf"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="OFF"
+            app:fontFamily="@font/titillium_web" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="120dp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/purple_color"
+            android:gravity="center"
+            android:text="AC"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/button_default"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold" />
+
+        <Button
+            android:id="@+id/acON"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="ON"
+            app:fontFamily="@font/titillium_web" />
+
+        <Button
+            android:id="@+id/acOFF"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="OFF"
+            app:fontFamily="@font/titillium_web" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="180dp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green_color"
+            android:gravity="center"
+            android:text="LIGHT2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/button_default"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold" />
+
+        <Button
+            android:id="@+id/light2ON"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="ON"
+            app:fontFamily="@font/titillium_web" />
+
+        <Button
+            android:id="@+id/light2OFF"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="OFF"
+            app:fontFamily="@font/titillium_web" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="240dp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue_color"
+            android:gravity="center"
+            android:text="SOCKET1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/button_default"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold" />
+
+        <Button
+            android:id="@+id/socketON"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="ON"
+            app:fontFamily="@font/titillium_web" />
+
+        <Button
+            android:id="@+id/socketOFF"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="OFF"
+            app:fontFamily="@font/titillium_web" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="300dp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue_color"
+            android:gravity="center"
+            android:text="SOCKET2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/button_default"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_bold" />
+
+        <Button
+            android:id="@+id/button52"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="ON"
+            app:fontFamily="@font/titillium_web" />
+
+        <Button
+            android:id="@+id/button82"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_normal_state"
+            android:text="OFF"
+            app:fontFamily="@font/titillium_web" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal|center"
+            android:text="CONNECTION DETAILS"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textSize="14sp"
+            app:fontFamily="@font/titillium_web"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+
+            <TextView
+                android:id="@+id/textView621"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@color/button_default"
+                app:fontFamily="@font/titillium_web" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Bluetooth Connection"
+                android:textColor="@color/button_default"
+                app:fontFamily="@font/titillium_web" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Internet Connection"
+                android:textColor="@color/button_default"
+                app:fontFamily="@font/titillium_web" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/yellow_color"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <TextView
+                android:id="@+id/textView6112"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/yellow_color"
+                android:gravity="center"
+                android:text="Signal Strength"
+                app:fontFamily="@font/titillium_web" />
+
+            <TextView
+                android:id="@+id/textView6312"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/list_color"
+                android:gravity="center"
+                android:text="Strong"
+                app:fontFamily="@font/titillium_web" />
+
+            <TextView
+                android:id="@+id/textView63142"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/list_color"
+                android:gravity="center"
+                android:text="Strong"
+                app:fontFamily="@font/titillium_web" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="52dp"
+            android:background="@color/button_default"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <TextView
+                android:id="@+id/textVie7w6112"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/yellow_color"
+                android:gravity="center"
+                android:text="Voice activation"
+                app:fontFamily="@font/titillium_web" />
+
+            <TextView
+                android:id="@+id/textView63612"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/list_color"
+                android:gravity="center"
+                android:text="Yes"
+                app:fontFamily="@font/titillium_web" />
+
+            <TextView
+                android:id="@+id/textView6315842"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/list_color"
+                android:gravity="center"
+                android:text="Yes"
+                app:fontFamily="@font/titillium_web" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
